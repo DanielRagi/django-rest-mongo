@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Django App</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="margin: 30px">
+    <div style="margin: auto; width: 700px; background-color: lightgray; padding: 30px">
+        <h2>Información de la película</h2><br>
+        <form method="POST">{% csrf_token %}
+            <input type="text" name="name" placeholder="Nombre"><br><br>
+            <input type="text" name="genre" placeholder="Género"><br><br>
+            <input type="text" name="description" placeholder="Descripción"><br><br>
+            <input type="text" name="director" placeholder="Director"><br><br>
+            <input type="text" name="year" placeholder="Año"><br><br>
+            <input type="submit" value="Guardar">
+        </form>
+    </div>
+</body>
+</html>
